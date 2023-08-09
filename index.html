@@ -53,7 +53,6 @@
                 <input class="choosefile" id="choosefile" type="file" accept="image/jpeg,image/jpg,image/png"/></div>
             </div>
           </div>
-          <br /><br />
           <div class="grid-item">
             <input
               class="input"
@@ -102,14 +101,24 @@
               
             />
 
-            <input
+            <select class="choosedepartment" id="blad" name="Blad Group">
+              <option value="">choose Blad Group...</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+            </select>
+
+            <!-- <input
               class="input"
               id="blad"
               type="text"
               name="blad"
               placeholder="Blad Group"
               
-            />
+            /> -->
             <input
               class="input"
               id="country"
@@ -130,26 +139,29 @@
               <span
                 >Gender :<span
                   ><input
+                  class="radio"
                     type="radio"
                     name="gender"
                     value="male"
                     id="male"
                     onclick="radiovalue(this.value)"
                   />
-                  <label for="male">Male</label></span
+                  <label for="male">Male&nbsp;&nbsp;</label></span
                 >
                 <span
                   ><input
+                  class="radio"
                     type="radio"
                     name="gender"
                     value="female"
                     id="female"
                     onclick="radiovalue(this.value)"
                   />
-                  <label for="female">Female</label></span
+                  <label for="female">Female&nbsp;&nbsp;</label></span 
                 >
                 <span
                   ><input
+                  class="radio"
                     type="radio"
                     name="gender"
                     value="other"
@@ -164,7 +176,7 @@
             <div class="gendate">
               <span
                 >Student Type :
-                <input type="checkbox" id="regular" name="regular" />
+                <input class="regular" type="checkbox" id="regular" name="regular" />
                 <label for="regular">Regular</label>
               </span>
             </div>

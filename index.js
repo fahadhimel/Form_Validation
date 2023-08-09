@@ -21,21 +21,82 @@ const date = document.getElementById("date");
 const errorp = document.getElementById("error");
 const form = document.getElementById("form");
 
-const lengthFunction = (idname, faildname) => {
-    idname.style.border = "";
-
-  if (idname.value.length < 3) {
-    errorp.innerText += `${faildname} length is to low. `;
+const lengthFunction = (idname) => {
+  idname.style.border = "";
+  const { name, value } = idname;
+  if (value.length < 4) {
+    errorp.innerText += `${name} length is to low. `;
     idname.style.border = "1px solid red";
-  } else if (idname.value.length > 50) {
-    errorp.innerHTML += `${faildname} length is to high. `;
+  } else if (value.length > 50) {
+    errorp.innerText += `${name} length is to high. `;
     idname.style.border = "1px solid red";
   }
 };
 
+const emailValidation = (email) => {
+  email.style.border = "";
+  lengthFunction(email);
+  const { name, value } = email;
+  if (value.indexOf("@") <= 0) {
+    errorp.innerText += `${name} is in invalid. `;
+    email.style.border = "1px solid red";
+  } else if (
+    value.charAt(value.length - 4) != "." &&
+    value.charAt(value.length - 3) != "."
+  ) {
+    errorp.innerText += `${name} is invalid. `;
+    email.style.border = "1px solid red";
+  }
+};
+
+const phoneValidation = (phone) => {
+  phone.style.border = "";
+  const { name, value } = phone;
+  if (value.length < 11 || value.length > 16) {
+    errorp.innerText += `${name} is invalid. `;
+    phone.style.border = "1px solid red";
+  }
+};
+
+const deparBladFunc = (DeBl) => {
+  DeBl.style.border = "";
+  const { name, value } = DeBl;
+  if (name === "department") {
+    if (value !== "CSE" && value !== "EEE") {
+      errorp.innerText += `${name} is invalid. `;
+      DeBl.style.border = "1px solid red";
+    }
+  } else if (name === "Blad Group") {
+    if (
+      value !== "O+" &&
+      value !== "O-" &&
+      value !== "A+" &&
+      value !== "A-" &&
+      value !== "AB+" &&
+      value !== "AB-"
+    ) {
+      errorp.innerText += `${name} is invalid. `;
+      DeBl.style.border = "1px solid red";
+    }
+  }
+};
+
 const validation = () => {
-  lengthFunction(firstname, firstname.name);
-  lengthFunction(lastname, lastname.name);
+  lengthFunction(firstname);
+  lengthFunction(lastname);
+  lengthFunction(fname);
+  lengthFunction(mname);
+
+
+  phoneValidation(pphone);
+  phoneValidation(phone);
+
+  emailValidation(email);
+  
+  deparBladFunc(department);
+  deparBladFunc(blad);
+
+  
 };
 
 const radiovalue = (value) => {

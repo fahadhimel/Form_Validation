@@ -7,6 +7,7 @@ main {
   font-family: "Roboto", sans-serif;
 }
 section {
+  position: relative;
   min-width: 70vw;
   min-height: 70vh;
   border-radius: 20px;
@@ -20,7 +21,7 @@ section h1 {
   font-weight: 500;
   text-transform: uppercase;
   color: rgba(241, 20, 64, 0.888);
-  text-shadow: 0 0 3px rgba(241, 20, 64, 0.888);
+  /* text-shadow: 0 0 3px rgba(241, 20, 64, 0.888); */
 }
 .nameimg {
   align-items: end;
@@ -75,10 +76,19 @@ input,
   background: none;
   border: 1px solid #2345;
 }
+
 .gendate {
   font-size: 22px;
   line-height: 50px;
   color: rgba(39, 40, 42, 0.735);
+}
+.radio {
+  height: 18px;
+  width: 18px;
+}
+.regular{
+  height: 18px;
+  width: 18px;
 }
 .date {
   display: grid;
@@ -98,6 +108,8 @@ button {
   font-size: 20px;
   grid-column-end: span 3;
 }
-section p {
+.error {
+  position: absolute;
   color: red;
+
 }

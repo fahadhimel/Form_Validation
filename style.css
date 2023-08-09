@@ -1,0 +1,103 @@
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+section {
+  min-width: 70vw;
+  min-height: 70vh;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 0 100px #29282837;
+  /* border: 1px solid red; */
+}
+section h1 {
+  font-size: 3rem;
+  line-height: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgba(241, 20, 64, 0.888);
+  text-shadow: 0 0 3px rgba(241, 20, 64, 0.888);
+}
+.nameimg {
+  align-items: end;
+}
+.profileimg {
+  display: flex;
+  justify-content: end;
+  height: 200px;
+}
+.profileimg img {
+  position: absolute;
+  height: auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  z-index: -1;
+}
+.choosefile {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  opacity: 0;
+}
+.profileimg input,
+.choosedepartment {
+  font-size: 20px;
+  color: rgba(39, 40, 42, 0.735);
+}
+#choosefileicon {
+  position: absolute;
+  font-size: 35px;
+  color: rgba(13, 207, 155, 0.429);
+}
+.grid-item {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  padding: 10px;
+}
+.input {
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #2345;
+  font-size: 20px;
+}
+input,
+.choosedepartment {
+  padding-left: 20px;
+}
+.choosedepartment {
+  border-radius: 5px;
+  background: none;
+  border: 1px solid #2345;
+}
+.gendate {
+  font-size: 22px;
+  line-height: 50px;
+  color: rgba(39, 40, 42, 0.735);
+}
+.date {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.date input {
+  color: rgba(39, 40, 42, 0.735);
+}
+
+button {
+  height: 50px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: rgba(241, 20, 64, 0.888);
+  font-weight: 600;
+  border: none;
+  font-size: 20px;
+  grid-column-end: span 3;
+}
+section p {
+  color: red;
+}

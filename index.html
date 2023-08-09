@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+     <!-- font awesome -->
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer"
+   />
+   <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+   />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Student registration</h1>
+        <form id="form">
+          <div class="nameimg grid-item">
+            <input
+              class="input"
+              id="firstname"
+              type="text"
+              name="First name"
+              placeholder="First name"
+              
+            />
+            <input
+              class="input"
+              id="lastname"
+              type="text"
+              name="Last name"
+              placeholder="Last name"
+              
+            />
+            <div class="profileimg">
+              <img src="user.png" alt="image" id="profile"/>
+              <div><i id="choosefileicon" class="fa-solid fa-camera"></i>
+                <input class="choosefile" id="choosefile" type="file" accept="image/jpeg,image/jpg,image/png"/></div>
+            </div>
+          </div>
+          <br /><br />
+          <div class="grid-item">
+            <input
+              class="input"
+              id="fname"
+              type="text"
+              name="Father's name"
+              placeholder="Father's name"
+              
+            />
+            <input
+              class="input"
+              id="mname"
+              type="text"
+              name="Mother's name"
+              placeholder="Mother's name"
+              
+            />
+            <input
+              class="input"
+              id="pphone"
+              type="number"
+              name="parent Phone"
+              placeholder="parent Phone"
+              
+            />
+            <select class="choosedepartment" id="department" name="department">
+              <option value="">choose Department...</option>
+              <option value="CSE">CSE</option>
+              <option value="EEE">EEE</option>
+            </select>
+            <input
+              class="input"
+              id="email"
+              type="email"
+              name="email"
+              placeholder="@gmail.com"
+              
+            />
+
+            <input
+              class="input"
+              id="phone"
+              type="number"
+              name="phone"
+              placeholder="phone"
+              
+            />
+
+            <input
+              class="input"
+              id="blad"
+              type="text"
+              name="blad"
+              placeholder="Blad Group"
+              
+            />
+            <input
+              class="input"
+              id="country"
+              type="text"
+              name="country"
+              placeholder="Country"
+              
+            />
+            <input
+              class="input"
+              id="address"
+              type="text"
+              name="address"
+              placeholder="Address"
+              
+            />
+            <div class="gendate">
+              <span
+                >Gender :<span
+                  ><input
+                    type="radio"
+                    name="gender"
+                    value="male"
+                    id="male"
+                    onclick="radiovalue(this.value)"
+                  />
+                  <label for="male">Male</label></span
+                >
+                <span
+                  ><input
+                    type="radio"
+                    name="gender"
+                    value="female"
+                    id="female"
+                    onclick="radiovalue(this.value)"
+                  />
+                  <label for="female">Female</label></span
+                >
+                <span
+                  ><input
+                    type="radio"
+                    name="gender"
+                    value="other"
+                    id="other"
+                    onclick="radiovalue(this.value)"
+                  />
+                  <label for="other">Other</label></span
+                ></span
+              >
+              <br />
+            </div>
+            <div class="gendate">
+              <span
+                >Student Type :
+                <input type="checkbox" id="regular" name="regular" />
+                <label for="regular">Regular</label>
+              </span>
+            </div>
+            <div class="date gendate">
+              <span>Date of birth :</span>
+              <input class="input" type="date" id="date" />
+            </div>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+        <p class="error" id="error"></p>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

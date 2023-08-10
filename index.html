@@ -10,18 +10,18 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap"
       rel="stylesheet"
     />
-     <!-- font awesome -->
-     <link
-     rel="stylesheet"
-     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-     crossorigin="anonymous"
-     referrerpolicy="no-referrer"
-   />
-   <link
-     rel="stylesheet"
-     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-   />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
@@ -31,158 +31,215 @@
         <h1>Student registration</h1>
         <form id="form">
           <div class="nameimg grid-item">
-            <input
-              class="input"
-              id="firstname"
-              type="text"
-              name="First name"
-              placeholder="First name"
-              
-            />
-            <input
-              class="input"
-              id="lastname"
-              type="text"
-              name="Last name"
-              placeholder="Last name"
-              
-            />
+            <div class="pinput">
+              <p id="pfirst"></p>
+              <input
+                style="width: 95%"
+                class="input"
+                id="firstname"
+                type="text"
+                name="First name"
+                placeholder="First name"
+              />
+            </div>
+            <div class="pinput">
+              <p id="plast"></p>
+              <input
+                class="input"
+                id="lastname"
+                type="text"
+                name="Last name"
+                placeholder="Last name"
+              />
+            </div>
             <div class="profileimg">
-              <img src="user.png" alt="image" id="profile"/>
-              <div><i id="choosefileicon" class="fa-solid fa-camera"></i>
-                <input class="choosefile" id="choosefile" type="file" accept="image/jpeg,image/jpg,image/png"/></div>
+              <img src="user.png" alt="image" id="profile" />
+              <div>
+                <i id="choosefileicon" class="fa-solid fa-camera"></i>
+                <input
+                  class="choosefile"
+                  id="choosefile"
+                  type="file"
+                  accept="image/jpeg,image/jpg,image/png"
+                />
+              </div>
             </div>
           </div>
           <div class="grid-item">
-            <input
-              class="input"
-              id="fname"
-              type="text"
-              name="Father's name"
-              placeholder="Father's name"
-              
-            />
-            <input
-              class="input"
-              id="mname"
-              type="text"
-              name="Mother's name"
-              placeholder="Mother's name"
-              
-            />
-            <input
-              class="input"
-              id="pphone"
-              type="number"
-              name="parent Phone"
-              placeholder="parent Phone"
-              
-            />
-            <select class="choosedepartment" id="department" name="department">
-              <option value="">choose Department...</option>
-              <option value="CSE">CSE</option>
-              <option value="EEE">EEE</option>
-            </select>
-            <input
-              class="input"
-              id="email"
-              type="email"
-              name="email"
-              placeholder="@gmail.com"
-              
-            />
-
-            <input
-              class="input"
-              id="phone"
-              type="number"
-              name="phone"
-              placeholder="phone"
-              
-            />
-
-            <select class="choosedepartment" id="blad" name="Blad Group">
-              <option value="">choose Blad Group...</option>
-              <option value="O+">O+</option>
-              <option value="O-">O-</option>
-              <option value="A+">A+</option>
-              <option value="A-">A-</option>
-              <option value="AB+">AB+</option>
-              <option value="AB-">AB-</option>
-            </select>
-
-            <!-- <input
-              class="input"
-              id="blad"
-              type="text"
-              name="blad"
-              placeholder="Blad Group"
-              
-            /> -->
-            <input
-              class="input"
-              id="country"
-              type="text"
-              name="country"
-              placeholder="Country"
-              
-            />
-            <input
-              class="input"
-              id="address"
-              type="text"
-              name="address"
-              placeholder="Address"
-              
-            />
-            <div class="gendate">
-              <span
-                >Gender :<span
-                  ><input
-                  class="radio"
-                    type="radio"
-                    name="gender"
-                    value="male"
-                    id="male"
-                    onclick="radiovalue(this.value)"
-                  />
-                  <label for="male">Male&nbsp;&nbsp;</label></span
-                >
-                <span
-                  ><input
-                  class="radio"
-                    type="radio"
-                    name="gender"
-                    value="female"
-                    id="female"
-                    onclick="radiovalue(this.value)"
-                  />
-                  <label for="female">Female&nbsp;&nbsp;</label></span 
-                >
-                <span
-                  ><input
-                  class="radio"
-                    type="radio"
-                    name="gender"
-                    value="other"
-                    id="other"
-                    onclick="radiovalue(this.value)"
-                  />
-                  <label for="other">Other</label></span
-                ></span
+            <div class="pinput">
+              <p id="pfname"></p>
+              <input
+                class="input"
+                id="fname"
+                type="text"
+                name="Father's name"
+                placeholder="Father's name"
+              />
+            </div>
+            <div class="pinput">
+              <p id="pmname"></p>
+              <input
+                class="input"
+                id="mname"
+                type="text"
+                name="Mother's name"
+                placeholder="Mother's name"
+              />
+            </div>
+            <div class="pinput">
+              <p id="ppphone"></p>
+              <input
+                class="input"
+                id="pphone"
+                type="number"
+                name="parent Phone"
+                value=""
+                placeholder="parent Phone"
+                onkeypress="handleKeyPress(event)"
+              />
+            </div>
+            <div class="pinput">
+              <p id="pdepartment"></p>
+              <select
+                class="choosedepartment"
+                id="department"
+                name="department"
               >
-              <br />
+                <option value="">choose Department...</option>
+                <option value="CSE">CSE</option>
+                <option value="EEE">EEE</option>
+              </select>
             </div>
-            <div class="gendate">
-              <span
-                >Student Type :
-                <input class="regular" type="checkbox" id="regular" name="regular" />
-                <label for="regular">Regular</label>
-              </span>
+            <div class="pinput">
+              <p id="pemail"></p>
+              <input
+                class="input"
+                id="email"
+                type="email"
+                name="email"
+                placeholder="@gmail.com"
+              />
             </div>
-            <div class="date gendate">
-              <span>Date of birth :</span>
-              <input class="input" type="date" id="date" />
+            <div class="pinput">
+              <p id="psphone"></p>
+              <input
+                class="input"
+                id="phone"
+                type="number"
+                name="phone"
+                placeholder="phone"
+                onkeypress="handleKeyPress(event)"
+              />
+            </div>
+            <div class="pinput">
+              <p id="pblad"></p>
+              <select class="choosedepartment" id="blad" name="Blad Group">
+                <option value="">choose Blad Group...</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+              </select>
+            </div>
+
+            <div class="pinput">
+              <p id="pcountry"></p>
+              <input
+                class="input"
+                id="country"
+                type="text"
+                name="country"
+                placeholder="Country"
+              />
+            </div>
+
+            <div class="pinput">
+              <p id="paddress"></p>
+              <input
+                class="input"
+                id="address"
+                type="text"
+                name="address"
+                placeholder="Address"
+              />
+            </div>
+
+            <div class="pinput">
+              <p id="pradio"></p>
+              <div class="gendate">
+                <span id="radioall"
+                  >Gender :<span
+                    ><input
+                      class="radio"
+                      type="radio"
+                      name="gender"
+                      value="male"
+                      id="male"
+                    />
+                    <!-- onclick="radiovalue(this.value)" -->
+                    <label for="male">Male&nbsp;&nbsp;</label></span
+                  >
+                  <span
+                    ><input
+                      class="radio"
+                      type="radio"
+                      name="gender"
+                      value="female"
+                      id="female"
+                    />
+                    <label for="female">Female&nbsp;&nbsp;</label></span
+                  >
+                  <span
+                    ><input
+                      class="radio"
+                      type="radio"
+                      name="gender"
+                      value="other"
+                      id="other"
+                    />
+                    <label for="other">Other</label></span
+                  >
+                </span>
+                <br />
+              </div>
+            </div>
+
+            <div class="pinput">
+              <p id="pregular"></p>
+              <div class="gendate" id="gendate">
+                <span
+                  >Student Type :
+                  <input
+                    class="regular"
+                    type="checkbox"
+                    id="regular"
+                    name="Regular"
+                  />
+                  <label for="regular">Regular</label>
+                  <input
+                    class="regular"
+                    type="checkbox"
+                    id="day"
+                    name="Day"
+                  />
+                  <label for="day">Day</label>
+                </span>
+              </div>
+            </div>
+            <div class="pinput">
+              <p id="pdate"></p>
+              <div class="date gendate">
+                <span>Date of birth :</span>
+                <input
+                  class="input"
+                  type="date"
+                  id="date"
+                  name="date"
+                  onkeypress="handleKeyPress(event)"
+                />
+              </div>
             </div>
             <button type="submit">Submit</button>
           </div>

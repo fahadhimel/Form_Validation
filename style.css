@@ -23,6 +23,9 @@ section h1 {
   color: rgba(241, 20, 64, 0.888);
   /* text-shadow: 0 0 3px rgba(241, 20, 64, 0.888); */
 }
+p{
+  color: red;
+}
 .nameimg {
   align-items: end;
 }
@@ -56,22 +59,27 @@ section h1 {
   color: rgba(13, 207, 155, 0.429);
 }
 .grid-item {
+  /* margin-top: 50px; */
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 10px;
-  padding: 10px;
+  align-items: end;
+  gap: 0px 10px;
+  padding: 0px;
 }
-.input {
+.input, .choosedepartment {
+  width: 95%;
   height: 50px;
   border-radius: 5px;
   border: 1px solid #2345;
   font-size: 20px;
-}
-input,
-.choosedepartment {
   padding-left: 20px;
 }
+
 .choosedepartment {
+  
+}
+.choosedepartment {
+  width: 100%;
   border-radius: 5px;
   background: none;
   border: 1px solid #2345;
@@ -106,6 +114,7 @@ button {
   font-weight: 600;
   border: none;
   font-size: 20px;
+  margin-top: 10px;
   grid-column-end: span 3;
 }
 .error {
